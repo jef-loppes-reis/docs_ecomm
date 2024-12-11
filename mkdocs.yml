@@ -11,15 +11,15 @@ theme:
     - header.autohide
   palette:
     - scheme: default
+      primary: white
+      toggle:
+        icon: material/weather-night
+        name: Modo noturno
+    - scheme: slate
       primary: black
       toggle:
         icon: material/weather-sunny
         name: Modo claro
-    - scheme: slate
-      primary: black
-      toggle:
-        icon: material/weather-night
-        name: Modo noturno
 
 markdown_extensions:
   - pymdownx.tasklist     # Suporte a lista de tarefas
