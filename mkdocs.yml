@@ -1,0 +1,40 @@
+site_name: Projetos Ecommerce
+
+theme:
+  # name: readthedocs       # Ou default mkdocs
+  name: material            # Ou default mkdocs
+  logo: assets/logo.png
+  language: pt-BR
+  features:
+    - content.code.select
+    - content.code.copy
+    - header.autohide
+  palette:
+    - scheme: default
+      primary: black
+      toggle:
+        icon: material/weather-sunny
+        name: Modo claro
+    - scheme: slate
+      primary: black
+      toggle:
+        icon: material/weather-night
+        name: Modo noturno
+
+markdown_extensions:
+  - pymdownx.tasklist     # Suporte a lista de tarefas
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+
+extra_css:
+  - https://unpkg.com/mermaid@8.5.1/dist/mermaid.css
+extra_javascript:
+  - https://unpkg.com/mermaid@8.5.1/dist/mermaid.min.js
+
+extra:
+  homepage: https://validacaofotosmldocs.com
+  version:
+    provider: mike
