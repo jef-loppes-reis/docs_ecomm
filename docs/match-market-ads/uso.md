@@ -1,33 +1,26 @@
 # Uso
 
-1. Baixe o repositorio do projeto
-```bash
-git clone https://github.com/jef-loppes-reis/match-market-ads
-```
-2. Depedencias
-```bash
-py -m venv .venv;
-.venv/Scripts/activate;
-pip install -r ./requirements.txt
-```
+1. Pegar informações de uma determinada loja oficial. Passar por uma conferência de **[CORRESPONDÊNCIAS]**, onde o usuário vai apontar se deve ou não clonar tal produto.
 
-## Processos
+    1.1 Identificao da loja oficial.
+    ![Loja](./imgs/uso/1.png)
 
--> Pegar informações de uma determinada loja oficial. Passar por uma conferência de **[CORRESPONDÊNCIAS]**, onde o usuário vai apontar se deve ou não clonar tal produto.
+    1.2 Identificando o nome referente a loja oficial
+    ![NomeLoja](./imgs/uso/2.png)
 
-```bash
-py ./main.py
-```
+    ```bash
+    py ./main.py
+    ```
 
--> Com a lista de correspondências pronta, agora é passar por uma validação de fotos. O programa baixa as fotos de todos os anúncios apontados para clonagem, depois abrirá um **[APLICATIVO]** apontando tal foto e o usuário decidirá qual foto deve ir ou não para o anúncio.
+2. Com a lista de correspondências pronta, agora é passar por uma validação de fotos. O programa baixa as fotos de todos os anúncios apontados para clonagem, depois abrirá um **[APLICATIVO]** apontando tal foto e o usuário decidirá qual foto deve ir ou não para o anúncio.
 
-```bash
-py ./photo_validation/get_photo_url.py # Baixar fotos
-py ./photo_validation/app.py           # Conferir fotos
-```
+    ```bash
+    py ./photo_validation/get_photo_url.py # Baixar fotos
+    py ./photo_validation/app.py           # Conferir fotos
+    ```
 
--> Com a lista de correspondências e suas respectivas fotos selecionadas, agora o programa deve **[CLONAR]** os produtos, alterando seus atributos conforme os atributos cadastrados no sistema "SIAC".
+3. Com a lista de correspondências e suas respectivas fotos selecionadas, agora o programa deve **[CLONAR]** os produtos, alterando seus atributos conforme os atributos cadastrados no sistema "SIAC".
 
-```bash
-py ./clonagem/uso.py  # Modulo principal para clonagem
-```
+    ```bash
+    py ./clonagem/main.py  # Modulo principal para clonagem
+    ```

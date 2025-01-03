@@ -3,6 +3,8 @@
 O objetivo desse projeto, e clonar anuncios do Mercado Livre, sendo eles de lojas oficiais.
 Basicamente e identinficar se o produto e o mesmo de tal loja oficial, seguindo alguns parametros.
 
+![Tela principal](./imgs/tela_get_ad.png)
+
 ## Funcionalidades
 
 1. [x] Baixar lista de lojas oficiais existentes no Mercado Livre;
@@ -33,44 +35,16 @@ flowchart TD
     F --> G{ETL Fuzzy infos MLB SIAC}
     C --> G
     G --> H[(DataFrame Results)]
-    H --> I[[Conferencia Humana]]
+    H --> I[Conferencia Humana]
     I --> J(Validacao dos produtos)
     I --> L(Validacao de imagens)
     J --> M(Cadastro dos produtos)
     L --> M
 ```
 
-## Exemplo da tabela
+## Tabela
 
 |mlb|gtin_ml|gtin_siac|gtin_fuzzy|mpn_ml|mpn_siac|mpn_fuzzy|
 |---|-------|---------|----------|------|--------|---------|
-|MLB4050163300|7899723815588|7899723815588|100|ASHY24050|ASHY24050|100|
-|MLB3141414637|7899723833681|7899723833681|100|BCVW20025|BCVW20J025|95|
-
-### Tipo de dados
-
-```json
-    {
-        "lista_infos_mlb": "str",
-        "lista_att_necessarios": "str",
-        "mlb": "str",
-        "gtin_ml": "str",
-        "gtin_siac": "str",
-        "gtin_fuzzy": "float",
-        "mpn_ml": "str",
-        "mpn_siac": "str",
-        "mpn_fuzzy": "float",
-        "sku_ml": "str",
-        "sku_siac": "str",
-        "sku_fuzzy": "float",
-        "numero_original_ml": "str",
-        "numero_original_siac": "str",
-        "numero_original_fuzzy": "str",
-        "marca_ml": "str",
-        "marca_siac": "str",
-        "marca_fuzzy": "float",
-        "lista_url_anuncios": "str",
-        "lista_mlb": "str",
-        "soma_fuzzy": "float"
-    }
-```
+|MLB4050163300|7899723815588|7899723815588|100%|ASHY24050|ASHY24050|100%|
+|MLB3141414637|7899723833681|7899723833681|100%|BCVW20025|BCVW20J025|95%|
